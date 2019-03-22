@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.piano_video{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+#btn_play{
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 3;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    color:white;
+    border:2px solid white;
+    text-align: center;
+    line-height: 80px;
+    font-size: 24px;
+    cursor: pointer;
+}
+.whole{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../assets/img/timg2.jpg");
+    background-size: 100% 100%;
+}
+.whole>.piano_key{
+    list-style: none;
+    width: 512px;
+    height: 244px;
+    margin:100px auto 0;
+}
+.whole>.piano_key>li{
+    float: left;
+    width: 60px;
+    height: 240px;
+    border:2px solid #000000;
+    background:#ffffff;
+    text-align: center;
+    position: relative;
+}
+.whole>.piano_key>li>img{
+    position: absolute;
+    top: 400px;
+    left: 0;
+    width: 60px;
+    opacity: 0;
+}
+.whole>.piano_key>li>div{
+    width:30px;
+    height: 120px;
+    background: black;
+    position: absolute;
+    top: -2px;
+    right: -15px;
+    z-index: 1;
+}
+.li_mousedown{
+    box-shadow: yellowgreen 0px 0px 10px 3px inset;
+}
+.whole>.piano_key>li>img.current{
+    top: -200px;
+    transition: all 6s;
+}
+.whole>.piano_key>li>img.opcaity1{
+    opacity: 1;
+}
