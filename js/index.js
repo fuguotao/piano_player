@@ -1,4 +1,4 @@
-'use strick';
+'use strict';
 $(function () {
    $("#btn_play").click(function () {
        /**
