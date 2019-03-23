@@ -1,7 +1,7 @@
 # 钢琴小demo
 
  效果图如下：
- ![](strar.gif)
+ ![dfdf](strar.gif "tu1")
  ![](play.gif)
  
 核心javascript代码
