@@ -165,10 +165,11 @@ $(function () {
     $(".piano_key>li").click(function () {
         var _t = $(this);
         _t.children("audio").get(0).play();
-        _t.children("img").addClass("opcaity1 current");
-        setTimeout(function () {
+        if(_t.children("img").hasClass("current")){
             _t.children("img").removeClass("opcaity1 current");
-        },6000)
+        }else {
+            _t.children("img").addClass("opcaity1 current");
+        }
     });
     $(".piano_key>li").mousedown(function () {
         $(this).addClass("li_mousedown");
@@ -202,10 +203,11 @@ $(function () {
                 if(isKeydown){
                     _li.addClass("li_mousedown")
                         .children("audio").get(0).play();
-                    _li.children("img").addClass("opcaity1 current");
-                    setTimeout(function () {
+                    if(_li.children("img").hasClass("current")){
                         _li.children("img").removeClass("opcaity1 current");
-                    },6000);
+                    }else {
+                        _li.children("img").addClass("opcaity1 current");
+                    }
                 }else {
                     _li.removeClass("li_mousedown")
                         .children("audio").get(0).pause();
