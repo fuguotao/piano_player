@@ -16,6 +16,9 @@ $(function () {
         _t.children("audio").get(0).play();
         if(_t.children("img").hasClass("current")){
             _t.children("img").removeClass("opcaity1 current");
+            setTimeout(function () {
+                _t.children("img").addClass("opcaity1 current");
+            },50)
         }else {
             _t.children("img").addClass("opcaity1 current");
         }
@@ -54,6 +57,9 @@ $(function () {
                         .children("audio").get(0).play();
                     if(_li.children("img").hasClass("current")){
                         _li.children("img").removeClass("opcaity1 current");
+                        setTimeout(function () {
+                            _li.children("img").addClass("opcaity1 current");
+                        },50)
                     }else {
                         _li.children("img").addClass("opcaity1 current");
                     }
